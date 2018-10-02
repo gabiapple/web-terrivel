@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Formulario para Monstro Terrivel</title>
+        <link rel="stylesheet" href="formulario.css">
+        <meta charset="UTF-8">
+    </head>
+    <form action="http://terrivel.herokuapp.com/monster" method="GET"> <!-- ⬅️ GET! -->
+        <label for="nome">Nome do monstro: <input name="nome" pattern="[A-z]+" title="Letras maiúsculas ou minúsculas"></label>
+        <label for="num_pedras">Número de pedras: <input name="num_pedras"></label>
+        <label for="tam_pedras">Tamanho das pedras: <input type="range" min="1" max="7" default="3" name="tam_pedras"></label>
+        <label for="corCeu">Cor do céu: <input type="color" name="corCeu1"></label>
+        <label for="corCeu2">Cor do céu 2: <input type="color" name="corCeu2"></label>
+        <label for="tipo_pedras">Tipo de pedras:
+            <select name="tipo_pedras">
+                <option value="marroada">Marroada</option>
+                <option value="ametista">Ametista</option>
+                <option value="topazio">Topazio</option>
+                <option value="espinela">Espinela</option>
+            </select>
+        </label>
+        <label class="label-inline" for="tipo_pedras_sortidas">Sortidas? <input type="checkbox" name="tipo_pedras_sortidas" value="sim"></label>
+        <button>Enviar</button>
+      </form>
+</html>
